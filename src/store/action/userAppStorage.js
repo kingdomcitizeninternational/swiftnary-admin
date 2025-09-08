@@ -106,9 +106,9 @@ export const checkIfAdminIsLoggedIn = () => {
         return
       }
 
-//http://backend.swiftnary.net
+//https://backend.swiftnary.net
 
-      response = await fetch(`http://backend.swiftnary.net/adminbytoken`, {
+      response = await fetch(`https://backend.swiftnary.net/adminbytoken`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +129,7 @@ export const checkIfAdminIsLoggedIn = () => {
 export const loginAdmin = (data) => {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('http://backend.swiftnary.net/adminlogin', {
+      let response = await fetch('https://backend.swiftnary.net/adminlogin', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -187,7 +187,7 @@ export const loginAdmin = (data) => {
 export const signupAdmin = (data) => {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch(`http://backend.swiftnary.net/adminsignup`, {
+      let response = await fetch(`https://backend.swiftnary.net/adminsignup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -253,7 +253,7 @@ export const fetchUsers = () => {
       adminToken
     } = getState().userAuth
     try {
-      let response = await fetch(`http://backend.swiftnary.net/users`, {
+      let response = await fetch(`https://backend.swiftnary.net/users`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -305,7 +305,7 @@ export const deleteUser = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/users/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -357,7 +357,7 @@ export const updateUser = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/users/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/users/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -413,7 +413,7 @@ export const fetchDeposits = () => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposits`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposits`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -465,7 +465,7 @@ export const deleteDeposit = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposits/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposits/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -517,7 +517,7 @@ export const updateDeposit = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposits/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposits/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -574,7 +574,7 @@ export const fetchWithdraws = () => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/withdraws`, {
+      let response = await fetch(`https://backend.swiftnary.net/withdraws`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -625,7 +625,7 @@ export const deleteWithdraw = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/withdraws/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/withdraws/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -676,7 +676,7 @@ export const updateWithdraw = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/withdraws/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/withdraws/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -737,7 +737,7 @@ export const fetchTrades = () => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/trades`, {
+      let response = await fetch(`https://backend.swiftnary.net/trades`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -788,7 +788,7 @@ export const deleteTrade = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/trades/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/trades/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -839,7 +839,7 @@ export const updateTrade = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/trades/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/trades/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -894,7 +894,7 @@ export const createTrade = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/trades`, {
+      let response = await fetch(`https://backend.swiftnary.net/trades`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -953,7 +953,7 @@ export const fetchPackages = () => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/packages`, {
+      let response = await fetch(`https://backend.swiftnary.net/packages`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -1004,7 +1004,7 @@ export const deletePackage = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/packages/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/packages/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -1055,7 +1055,7 @@ export const updatePackage = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/packages/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/packages/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -1108,7 +1108,7 @@ export const createPackage = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/packages`, {
+      let response = await fetch(`https://backend.swiftnary.net/packages`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1173,7 +1173,7 @@ export const fetchInvestments = () => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/investments`, {
+      let response = await fetch(`https://backend.swiftnary.net/investments`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -1225,7 +1225,7 @@ export const deleteInvestment = (id) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/investments/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/investments/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -1277,7 +1277,7 @@ export const updateInvestment = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/investments/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/investments/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -1333,7 +1333,7 @@ export const fetchDepositHandlers = () => {
     let { adminToken } = getState().userAuth;
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposit-handlers`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposit-handlers`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -1364,7 +1364,7 @@ export const deleteDepositHandler = (id) => {
     let { adminToken } = getState().userAuth;
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposit-handlers/${id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposit-handlers/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -1391,7 +1391,7 @@ export const updateDepositHandler = (data) => {
     let { adminToken } = getState().userAuth;
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposit-handlers/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposit-handlers/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -1419,7 +1419,7 @@ export const createDepositHandler = (data) => {
     let { adminToken } = getState().userAuth;
 
     try {
-      let response = await fetch(`http://backend.swiftnary.net/deposit-handlers`, {
+      let response = await fetch(`https://backend.swiftnary.net/deposit-handlers`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1453,11 +1453,11 @@ export const updateAdmin = (data) => {
   return async (dispatch, getState) => {
     let {
       adminToken
-    } = getState().userAuth//http://localhostxxxx:9090
+    } = getState().userAuth//https://localhostxxxx:9090
     //https://backend.AGMxx.net
-    //http://backend.swiftnary.net
+    //https://backend.swiftnary.net
     try {
-      let response = await fetch(`http://backend.swiftnary.net/admin/${data._id}`, {
+      let response = await fetch(`https://backend.swiftnary.net/admin/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
