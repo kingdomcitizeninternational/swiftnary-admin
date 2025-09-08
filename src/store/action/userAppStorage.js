@@ -1454,7 +1454,7 @@ export const updateAdmin = (data) => {
     let {
       adminToken
     } = getState().userAuth//https://localhostxxxx:9090
-    //https://backend.AGMxx.net
+    //https://backend.SWNxx.net
     //https://backend.swiftnary.net
     try {
       let response = await fetch(`https://backend.swiftnary.net/admin/${data._id}`, {

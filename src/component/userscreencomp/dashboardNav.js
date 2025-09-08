@@ -23,7 +23,7 @@ const DashboardHeader = ({ showmenuHandler, title, openTransferModal, openTradeM
             {/* Left Section */}
             <div className={styles.headerLeft}>
                 <h1 className={styles.title} style={{ color: color.importantText }}>
-                    {headerTitle || 'AGM'}
+                    {headerTitle || 'SWN'}
                 </h1>
             </div>
 

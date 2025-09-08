@@ -50,7 +50,7 @@ const Sidebar = ({ status }) => {
       <div>
         <div className={styles.topSection}>
         <h2 style={{color:'#fff'}}>
-            AGM
+            SWN
           </h2>
         </div>
 
