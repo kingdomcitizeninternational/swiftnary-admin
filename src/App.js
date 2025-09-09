@@ -46,6 +46,13 @@ const AdminCreateHandler = React.lazy(() => import('./screen/admin_screen/Dashbo
 
 const AdminEditAdmin = React.lazy(() => import('./screen/admin_screen/Dashboard/AdminEditAdmin'))
 
+
+const AdminSendEmail = React.lazy(() => import('./screen/admin_screen/Dashboard/AdminSendEmail'))
+
+
+
+
+
 function App() {
   let dispatch = useDispatch()
   let { adminToken } = useSelector(state => state.userAuth)
@@ -70,9 +77,9 @@ function App() {
           <Route path='/admindashboard/users/:id' element={adminToken ? <AdminEditUser status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/deposits' element={adminToken ? <AdminDeposits status={false} /> : <AdminLogin />} />
           <Route path='/admindashboard/deposits/:id' element={adminToken ? <AdminEditDeposit status={true} /> : <AdminLogin />} />
-        
 
-          <Route path='/admindashboard/investments' element={adminToken ? <AdminInvestments  status={true} /> : <AdminLogin />} />
+
+          <Route path='/admindashboard/investments' element={adminToken ? <AdminInvestments status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/investments/:id' element={adminToken ? <AdminEditInvestment status={true} /> : <AdminLogin />} />
 
 
@@ -80,26 +87,26 @@ function App() {
 
           <Route path='/admindashboard/withdraws' element={adminToken ? <AdminWithdraws status={false} /> : <AdminLogin />} />
           <Route path='/admindashboard/withdraw/:id' element={adminToken ? <AdminEditWithdraw status={true} /> : <AdminLogin />} />
+
           <Route path='/admindashboard/admin' element={adminToken ? <AdminEditAdmin status={true} /> : <AdminLogin />} />
 
+          <Route path='/admindashboard/send-email' element={adminToken ? <AdminSendEmail status={true} /> : <AdminLogin />} />
 
           <Route path='/admindashboard/trades' element={adminToken ? <AdminTrades status={false} /> : <AdminLogin />} />
           <Route path='/admindashboard/traders/:id' element={adminToken ? <AdminEditTrade status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/trade' element={adminToken ? <AdminCreateTrade status={true} /> : <AdminLogin />} />
-          
 
-         
           <Route path='/admindashboard/packages' element={adminToken ? <AdminPackages status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/packages/:id' element={adminToken ? <AdminEditPackage status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/package' element={adminToken ? <AdminCreatePackage status={true} /> : <AdminLogin />} />
 
 
-          
-         
+
+
           <Route path='/admindashboard/handlers' element={adminToken ? <AdminHandlers status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/handlers/:id' element={adminToken ? <AdminEditHandler status={true} /> : <AdminLogin />} />
           <Route path='/admindashboard/handler' element={adminToken ? <AdminCreateHandler status={true} /> : <AdminLogin />} />
-          
+
 
         </Routes>
       </Suspense>
@@ -109,6 +116,6 @@ function App() {
 //AdminPackages
 //AdminEditPackage
 //AdminCreatePackage
-  
+
 
 export default App;

@@ -1444,11 +1444,6 @@ export const createDepositHandler = (data) => {
 };
 
 
-
-
-
-
-
 export const updateAdmin = (data) => {
   return async (dispatch, getState) => {
     let {
@@ -1503,11 +1498,50 @@ export const updateAdmin = (data) => {
   }
 }
 
+
+export const sendEmailAPI = (data) => {
+  return async (dispatch, getState) => {
+    const { adminToken } = getState().userAuth;
+
+    try {
+      const response = await fetch(`https://backend.swiftnary.net/send-email`, {
+        method: "POST", 
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${adminToken}`, 
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        return {
+          bool: false,
+          message: result.message || "Failed to send email",
+        };
+      }
+      return {
+        bool: true,
+        message: result.message || "Email sent successfully",
+        response: result.response,
+      };
+
+    } catch (err) {
+      console.error("sendEmailAPI error:", err);
+      return {
+        bool: false,
+        message: err.message || "Network error",
+      };
+    }
+  };
+};
+
+
 export const logout = (id) => {
   return async (dispatch, getState) => {
 
   }
-
 }
 
 

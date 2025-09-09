@@ -40,8 +40,8 @@ let topMenu = [
   },
   {
     icon: 'explore',
-    title: 'handlers',
-    link: '/admindashboard/handlers'
+    title: 'send-email',
+    link: '/admindashboard/send-email'
   }
 ]
 
