@@ -22,6 +22,7 @@ let topMenu = [
     title: 'deposits',
     link: '/admindashboard/deposits'
   },
+  { icon: 'explore', title: 'withdraws', link: '/admindashboard/withdraws' },
   
   {
     icon: 'explore',
