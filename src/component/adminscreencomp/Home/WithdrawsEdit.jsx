@@ -26,6 +26,7 @@ export const AdminWithrawEditComponent = ({ updateHandler, }) => {
     let submitHandler = (e) => {
         e.preventDefault()
         //patch case on 
+        console.log(isData)
         updateHandler(isData)
 
     }
@@ -92,7 +93,7 @@ export const AdminWithrawEditComponent = ({ updateHandler, }) => {
           { label: 'Account Name', value: isData.account_name },
           { label: 'Gcash Name', value: isData.name },
           { label: 'Gcash Phone', value: isData.phone },
-          { label: 'Date', value: isData.date },
+          
         ].map(({ label, value, editable, field }, index) => (
           <div
             className={styles.inputCards}
@@ -107,7 +108,6 @@ export const AdminWithrawEditComponent = ({ updateHandler, }) => {
             <input
               type="text"
               value={value}
-              readOnly={!editable}
               onChange={editable ? (e) => handleChangeHandler(e, field) : undefined}
               className={`${styles.inputField} ${!editable ? styles.readOnly : ''}`}
               style={{
@@ -130,6 +130,34 @@ export const AdminWithrawEditComponent = ({ updateHandler, }) => {
             />
           </div>
         ))}
+
+         <label
+              style={{ fontSize: '16px', color: '#333', marginBottom: '8px' }}
+            >
+              Date
+            </label>
+            <input
+              type="date"
+              value={isData.date}
+              onChange={ (e) => handleChangeHandler(e,'date')}
+              className={`${styles.inputField}`}
+              style={{
+                padding: '12px',
+                borderRadius: '8px',
+                border: '1px solid #ddd',
+                width: '100%',
+                fontSize: '14px',
+                outline: 'none',
+                transition: 'box-shadow 0.3s ease, border-color 0.3s ease',
+
+              }}
+             
+            
+            />
+
+        {
+          /* { label: 'Date', value: isData.date }, */
+        }
 
         <div className={styles.inputCards} style={{ marginBottom: '20px' }}>
           <label style={{ fontSize: '16px', color: '#333', marginBottom: '8px' }}>

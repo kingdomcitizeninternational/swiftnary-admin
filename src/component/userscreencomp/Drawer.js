@@ -23,7 +23,7 @@ let topMenu = [
     link: '/admindashboard/deposits'
   },
   { icon: 'explore', title: 'withdraws', link: '/admindashboard/withdraws' },
-  
+
   {
     icon: 'explore',
     title: 'trades',
@@ -60,11 +60,11 @@ const DashboardDrawer = ({ showmenuHandler }) => {
       await dispatch(logout())
 
     } else {
-      if(data.title == 'bank'){
+      if (data.title == 'bank') {
         window.location.href = "https://bank-admin-8ahj.onrender.com";  // 
-        return 
-    }
-    navigate(data.link)
+        return
+      }
+      navigate(data.link)
     }
   }
 
@@ -78,7 +78,7 @@ const DashboardDrawer = ({ showmenuHandler }) => {
     <div className={styles.drawer} style={{ backgroundColor: color.background }}>
       <div className={styles.cancel} onClick={showmenuHandler}>
 
-        <span className='material-icons' style={{color:'#fff'}}>
+        <span className='material-icons' style={{ color: '#fff' }}>
           close
         </span>
       </div>
